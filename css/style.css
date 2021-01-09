@@ -65,6 +65,10 @@ body {
   text-align: left;
   }
 
+
+svg {
+  fill: red;
+}
 [tabindex="-1"]:focus {
   outline: 0 !important; }
 
