@@ -8470,7 +8470,11 @@ h1, h2, h3, h4, h5,
       position: relative;
       z-index: 0; }
       @media (max-width: 1199.98px) {
+        .owl-carousel.home-slider {
+          height: 500px;
+           }
         .owl-carousel.home-slider .slider-item {
+          height: 500px;
           background-position: center center !important; } }
       .owl-carousel.home-slider .slider-item .overlay {
         position: absolute;
@@ -8518,8 +8522,10 @@ h1, h2, h3, h4, h5,
             transform: skewX(-20deg); }
           @media (max-width: 991.98px) {
             .owl-carousel.home-slider .slider-item .slider-text .one-third {
+              height: 800px;
+              background-position:top ;
               width: 100%;
-              z-index: 0; }
+              z-index: -1; }
               .owl-carousel.home-slider .slider-item .slider-text .one-third .overlay {
                 opacity: .3; }
               .owl-carousel.home-slider .slider-item .slider-text .one-third:after {
