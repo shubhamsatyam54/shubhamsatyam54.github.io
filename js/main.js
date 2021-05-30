@@ -348,3 +348,32 @@ $(function() {
 	 var elems = document.querySelectorAll('.pm');
 	 var instances = M.FloatingActionButton.init(elems, options);
  });
+
+
+ $('.contact-form').on('submit',function(e){
+	 //optional validation code here
+
+	 e.preventDefault();
+
+	 $.ajax({
+		 url: "https://script.google.com/macros/s/AKfycbx1oRHVIWfC8sODoLeDjSW8nUC2LOGzb89sajRArN06_3vojz2GiDDH7BZwSm0CR-FKGA/exec",
+		 method: "POST",
+		 dataType: "json",
+		 data: $(".contact-form").serialize(),
+		 success: function(response) {
+
+			 if(response.result == "success") {
+				 $('.contact-form')[0].reset();
+				 alert('Thank you for contacting us.');
+				 return true;
+			 }
+			 else {
+				 alert("Something went wrong. Please try again.")
+			 }
+		 },
+		 error: function() {
+
+			 alert("Something went wrong. Please try again.")
+		 }
+	 })
+ });
